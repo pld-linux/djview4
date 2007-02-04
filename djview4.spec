@@ -17,6 +17,7 @@ BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	djvulibre-devel >= 3.5.17
 BuildRequires:	libstdc++-devel
+BuildRequires:	pkgconfig
 BuildRequires:	qt4-build >= 4.0
 BuildRequires:	qt4-qmake >= 4.0
 BuildRequires:	rpmbuild(macros) >= 1.357
