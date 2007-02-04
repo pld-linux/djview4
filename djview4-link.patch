@@ -1,0 +1,11 @@
+--- djview4-4.0/nsdejavu/Makefile.in.orig	2007-01-04 21:30:03.000000000 +0100
++++ djview4-4.0/nsdejavu/Makefile.in	2007-02-04 23:58:23.980228808 +0100
+@@ -48,7 +48,7 @@
+ 
+ CFLAGS = @CPPFLAGS@ ${OPTS} ${INCS} ${NSDEJAVU_CFLAGS} 
+ 
+-LIBS = @LDFLAGS@ ${NSDEJAVU_LIBS} 
++LIBS = @LDFLAGS@ ${NSDEJAVU_LIBS} -lXt -lX11
+ 
+ all: nsdejavu.la nsdejavu.x nsdejavu.1
+ 
