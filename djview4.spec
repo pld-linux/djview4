@@ -1,5 +1,5 @@
 Summary:	DjVu viewer based on Qt4
-Summary(pl.UTF-8):   Przeglądarka DjVu oparta na Qt4
+Summary(pl.UTF-8):	Przeglądarka DjVu oparta na Qt4
 Name:		djview4
 Version:	4.0
 Release:	1
@@ -35,7 +35,7 @@ dokumentów DjVu, oparta na bibliotece DjVuLibre-3.5 i toolkicie Qt4.
 
 %package -n browser-plugin-%{name}
 Summary:	DjView4 browser plugin
-Summary(pl.UTF-8):   Wtyczka DjView4 do przegląderek WWW
+Summary(pl.UTF-8):	Wtyczka DjView4 do przegląderek WWW
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	browser-plugins >= 2.0
