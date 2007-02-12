@@ -1,5 +1,5 @@
 Summary:	DjVu viewer based on Qt4
-Summary(pl):	Przegl±darka DjVu oparta na Qt4
+Summary(pl.UTF-8):   PrzeglÄ…darka DjVu oparta na Qt4
 Name:		djview4
 Version:	4.0
 Release:	1
@@ -29,13 +29,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 DjView4 is a viewer and browser plugin for DjVu documents, based on
 the DjVuLibre-3.5 library and the Qt4 toolkit.
 
-%description -l pl
-DjView4 to przegl±darka i wtyczka dla przegl±darek do ogl±dania
-dokumentów DjVu, oparta na bibliotece DjVuLibre-3.5 i toolkicie Qt4.
+%description -l pl.UTF-8
+DjView4 to przeglÄ…darka i wtyczka dla przeglÄ…darek do oglÄ…dania
+dokumentÃ³w DjVu, oparta na bibliotece DjVuLibre-3.5 i toolkicie Qt4.
 
 %package -n browser-plugin-%{name}
 Summary:	DjView4 browser plugin
-Summary(pl):	Wtyczka DjView4 do przegl±derek WWW
+Summary(pl.UTF-8):   Wtyczka DjView4 do przeglÄ…derek WWW
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	browser-plugins >= 2.0
@@ -52,8 +52,8 @@ Obsoletes:	netscape-plugin-djvulibre
 %description -n browser-plugin-%{name}
 DjView4 plugin for Mozilla and Mozilla-based browsers.
 
-%description -n browser-plugin-%{name} -l pl
-Wtyczka DjView4 do przegl±darek zgodnych z Mozill±.
+%description -n browser-plugin-%{name} -l pl.UTF-8
+Wtyczka DjView4 do przeglÄ…darek zgodnych z MozillÄ….
 
 %prep
 %setup -q
