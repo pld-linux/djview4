@@ -1,12 +1,12 @@
 Summary:	DjVu viewer based on Qt4
 Summary(pl.UTF-8):	Przeglądarka DjVu oparta na Qt4
 Name:		djview4
-Version:	4.1
+Version:	4.2
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Graphics
 Source0:	http://dl.sourceforge.net/djvu/%{name}-%{version}.tar.gz
-# Source0-md5:	110b62fefbd010c77fdacde1fc6f77a7
+# Source0-md5:	f8a08234c5e261c4690a18289b904013
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-desktop.patch
 Patch2:		%{name}-link.patch
@@ -56,7 +56,7 @@ DjView4 plugin for Mozilla and Mozilla-based browsers.
 Wtyczka DjView4 do przeglądarek zgodnych z Mozillą.
 
 %prep
-%setup -q -n %{name}-%{version}.orig
+%setup -q
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
