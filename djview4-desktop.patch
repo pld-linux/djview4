@@ -24,16 +24,14 @@
  	-@echo "Run ${datadir_djview}/register-djview-menu install"
  	-@echo " to register the djview3 menu entries."
  
---- djview4-4.0/desktopfiles/djvulibre-djview4.desktop.orig	2007-01-17 03:30:46.000000000 +0100
-+++ djview4-4.0/desktopfiles/djvulibre-djview4.desktop	2007-02-04 23:48:55.363825205 +0100
-@@ -1,8 +1,8 @@
+--- djview4-4.2/desktopfiles/djvulibre-djview4.desktop.orig	2007-08-01 05:31:12.000000000 +0200
++++ djview4-4.2/desktopfiles/djvulibre-djview4.desktop	2008-01-12 15:30:13.292034239 +0100
+@@ -1,7 +1,7 @@
  [Desktop Entry]
  Encoding=UTF-8
  Type=Application
 -Categories=Qt;Graphics
--MimeType=image/x-djvu;image/x.djvu;image/vnd.djvu
 +Categories=Qt;Graphics;Viewer;
-+MimeType=image/x-djvu;image/x.djvu;image/vnd.djvu;
+ MimeType=image/x-djvu;image/x.djvu;image/vnd.djvu;
  Name=DjView4
  Exec=djview4 %f
- Terminal=false
