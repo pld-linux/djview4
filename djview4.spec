@@ -17,8 +17,10 @@ BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	djvulibre-devel >= 3.5.17
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtiff-devel
 BuildRequires:	pkgconfig
 BuildRequires:	qt4-build >= 4.0
+BuildRequires:	qt4-linguist
 BuildRequires:	qt4-qmake >= 4.0
 BuildRequires:	rpmbuild(macros) >= 1.357
 BuildRequires:	xorg-lib-libXt-devel
@@ -44,8 +46,8 @@ Requires:	browser-plugins(%{_target_base_arch})
 Provides:	browser-plugin-djvulibre
 Provides:	mozilla-plugin-djvulibre
 Provides:	netscape-plugin-djvulibre
-Obsoletes:	djview-netscape
 Obsoletes:	browser-plugion-djvulibre
+Obsoletes:	djview-netscape
 Obsoletes:	mozilla-plugin-djvulibre
 Obsoletes:	netscape-plugin-djvulibre
 
