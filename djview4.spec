@@ -1,11 +1,12 @@
 Summary:	DjVu viewer based on Qt4
+Summary(hu.UTF-8):	DjVu nézegető Qt4 alapon
 Summary(pl.UTF-8):	Przeglądarka DjVu oparta na Qt4
 Name:		djview4
 Version:	4.5
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Graphics
-Source0:	http://dl.sourceforge.net/djvu/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/djvu/%{name}-%{version}.tar.gz
 # Source0-md5:	0461a26dbcac33dcc5eb7955ac357504
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-desktop.patch
@@ -31,12 +32,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 DjView4 is a viewer and browser plugin for DjVu documents, based on
 the DjVuLibre-3.5 library and the Qt4 toolkit.
 
+%description -l hu.UTF-8
+DjView4 egy nézegető és böngésző plugin DjVu dokumentumokhoz, a
+DjVuLibre-3.5 könyvtárra és a Qt4 készletre épülve.
+
 %description -l pl.UTF-8
 DjView4 to przeglądarka i wtyczka dla przeglądarek do oglądania
 dokumentów DjVu, oparta na bibliotece DjVuLibre-3.5 i toolkicie Qt4.
 
 %package -n browser-plugin-%{name}
 Summary:	DjView4 browser plugin
+Summary(hu.UTF-8):	DjView4 böngésző plugin
 Summary(pl.UTF-8):	Wtyczka DjView4 do przegląderek WWW
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
@@ -53,6 +59,9 @@ Obsoletes:	netscape-plugin-djvulibre
 
 %description -n browser-plugin-%{name}
 DjView4 plugin for Mozilla and Mozilla-based browsers.
+
+%description -n browser-plugin-%{name} -l hu.UTF-8
+DjView4 plugin Mozilla és Mozilla-alapú böngészőkhöz.
 
 %description -n browser-plugin-%{name} -l pl.UTF-8
 Wtyczka DjView4 do przeglądarek zgodnych z Mozillą.
