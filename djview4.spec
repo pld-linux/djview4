@@ -2,12 +2,12 @@ Summary:	DjVu viewer based on Qt4
 Summary(hu.UTF-8):	DjVu nézegető Qt4 alapon
 Summary(pl.UTF-8):	Przeglądarka DjVu oparta na Qt4
 Name:		djview4
-Version:	4.5
+Version:	4.6
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Graphics
 Source0:	http://downloads.sourceforge.net/djvu/%{name}-%{version}.tar.gz
-# Source0-md5:	0461a26dbcac33dcc5eb7955ac357504
+# Source0-md5:	642105970467cf0864c0073140d1fa11
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-desktop.patch
 Patch2:		%{name}-link.patch
@@ -52,7 +52,7 @@ Requires:	browser-plugins(%{_target_base_arch})
 Provides:	browser-plugin-djvulibre
 Provides:	mozilla-plugin-djvulibre
 Provides:	netscape-plugin-djvulibre
-Obsoletes:	browser-plugion-djvulibre
+Obsoletes:	browser-plugin-djvulibre
 Obsoletes:	djview-netscape
 Obsoletes:	mozilla-plugin-djvulibre
 Obsoletes:	netscape-plugin-djvulibre
