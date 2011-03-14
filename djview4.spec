@@ -2,19 +2,19 @@ Summary:	DjVu viewer based on Qt4
 Summary(hu.UTF-8):	DjVu nézegető Qt4 alapon
 Summary(pl.UTF-8):	Przeglądarka DjVu oparta na Qt4
 Name:		djview4
-Version:	4.6
+Version:	4.7
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Graphics
-Source0:	http://downloads.sourceforge.net/djvu/%{name}-%{version}.tar.gz
-# Source0-md5:	642105970467cf0864c0073140d1fa11
+Source0:	http://downloads.sourceforge.net/djvu/djview-%{version}.tar.gz
+# Source0-md5:	bc4d61934ce3a5768daeb85e54e12ff0
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-desktop.patch
 Patch2:		%{name}-link.patch
 URL:		http://djvu.sourceforge.net/
 BuildRequires:	QtGui-devel >= 4.0
 BuildRequires:	QtNetwork-devel >= 4.0
-BuildRequires:	autoconf >= 2.50
+BuildRequires:	autoconf >= 2.67
 BuildRequires:	automake
 BuildRequires:	djvulibre-devel >= 3.5.17
 BuildRequires:	libstdc++-devel
@@ -67,7 +67,7 @@ DjView4 plugin Mozilla és Mozilla-alapú böngészőkhöz.
 Wtyczka DjView4 do przeglądarek zgodnych z Mozillą.
 
 %prep
-%setup -q
+%setup -q -n djview-%{version}
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
@@ -107,7 +107,7 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc COPYRIGHT NEWS README TODO
+%doc COPYRIGHT NEWS README
 %attr(755,root,root) %{_bindir}/djview
 %attr(755,root,root) %{_bindir}/djview4
 %{_mandir}/man1/djview.1*
