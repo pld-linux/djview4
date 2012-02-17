@@ -2,15 +2,16 @@ Summary:	DjVu viewer based on Qt4
 Summary(hu.UTF-8):	DjVu nézegető Qt4 alapon
 Summary(pl.UTF-8):	Przeglądarka DjVu oparta na Qt4
 Name:		djview4
-Version:	4.7
-Release:	2
+Version:	4.8
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Graphics
 Source0:	http://downloads.sourceforge.net/djvu/djview-%{version}.tar.gz
-# Source0-md5:	bc4d61934ce3a5768daeb85e54e12ff0
+# Source0-md5:	70ef8f416c7d6892cc0cf012bfd0ae07
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-desktop.patch
 Patch2:		%{name}-link.patch
+Patch3:		%{name}-swap.patch
 URL:		http://djvu.sourceforge.net/
 BuildRequires:	QtGui-devel >= 4.0
 BuildRequires:	QtNetwork-devel >= 4.0
@@ -71,6 +72,7 @@ Wtyczka DjView4 do przeglądarek zgodnych z Mozillą.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 cp -f /usr/share/automake/config.sub config
