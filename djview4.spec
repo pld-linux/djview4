@@ -20,6 +20,7 @@ BuildRequires:	automake
 BuildRequires:	djvulibre-devel >= 3.5.17
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtiff-devel
+BuildRequires:	libtool >= 2:2.0
 BuildRequires:	pkgconfig
 BuildRequires:	qt4-build >= 4.0
 BuildRequires:	qt4-linguist
@@ -75,7 +76,8 @@ Wtyczka DjView4 do przeglądarek zgodnych z Mozillą.
 %patch3 -p1
 
 %build
-cp -f /usr/share/automake/config.sub config
+%{__rm} config/{libtool,lt*}.m4
+%{__libtoolize}
 %{__aclocal} -I config
 %{__autoconf}
 export QTDIR=%{_libdir}/qt4
