@@ -2,16 +2,15 @@ Summary:	DjVu viewer based on Qt4
 Summary(hu.UTF-8):	DjVu nézegető Qt4 alapon
 Summary(pl.UTF-8):	Przeglądarka DjVu oparta na Qt4
 Name:		djview4
-Version:	4.8
+Version:	4.9
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Graphics
 Source0:	http://downloads.sourceforge.net/djvu/djview-%{version}.tar.gz
-# Source0-md5:	70ef8f416c7d6892cc0cf012bfd0ae07
+# Source0-md5:	0390cb133ffc7d3054f2184629e5b336
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-desktop.patch
 Patch2:		%{name}-link.patch
-Patch3:		%{name}-swap.patch
 URL:		http://djvu.sourceforge.net/
 BuildRequires:	QtGui-devel >= 4.0
 BuildRequires:	QtNetwork-devel >= 4.0
@@ -69,11 +68,10 @@ DjView4 plugin Mozilla és Mozilla-alapú böngészőkhöz.
 Wtyczka DjView4 do przeglądarek zgodnych z Mozillą.
 
 %prep
-%setup -q -n djview-%{version}
+%setup -q -n djview4-%{version}
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
 
 %build
 %{__rm} config/{libtool,lt*}.m4
@@ -122,6 +120,8 @@ fi
 %lang(fr) %{_datadir}/djvu/djview4/djview_fr.qm
 %lang(ru) %{_datadir}/djvu/djview4/djview_ru.qm
 %lang(uk) %{_datadir}/djvu/djview4/djview_uk.qm
+%lang(zh_cn) %{_datadir}/djvu/djview4/djview_zh_cn.qm
+%lang(zh_tw) %{_datadir}/djvu/djview4/djview_zh_tw.qm
 %{_desktopdir}/djvulibre-djview4.desktop
 %{_iconsdir}/hicolor/32x32/apps/djvulibre-djview4.png
 
