@@ -12,11 +12,11 @@ Patch0:		%{name}-opt.patch
 Patch1:		%{name}-desktop.patch
 Patch2:		%{name}-link.patch
 URL:		http://djvu.sourceforge.net/
-BuildRequires:	QtGui-devel >= 4.0
-BuildRequires:	QtNetwork-devel >= 4.0
+BuildRequires:	QtGui-devel >= 4.4
+BuildRequires:	QtNetwork-devel >= 4.4
 BuildRequires:	autoconf >= 2.67
 BuildRequires:	automake
-BuildRequires:	djvulibre-devel >= 3.5.17
+BuildRequires:	djvulibre-devel >= 3.5.19
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	libtool >= 2:2.0
@@ -26,6 +26,7 @@ BuildRequires:	qt4-linguist
 BuildRequires:	qt4-qmake >= 4.0
 BuildRequires:	rpmbuild(macros) >= 1.357
 BuildRequires:	xorg-lib-libXt-devel
+Requires:	djvulibre >= 3.5.19
 Obsoletes:	djvulibre-djview
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -120,8 +121,8 @@ fi
 %lang(fr) %{_datadir}/djvu/djview4/djview_fr.qm
 %lang(ru) %{_datadir}/djvu/djview4/djview_ru.qm
 %lang(uk) %{_datadir}/djvu/djview4/djview_uk.qm
-%lang(zh_cn) %{_datadir}/djvu/djview4/djview_zh_cn.qm
-%lang(zh_tw) %{_datadir}/djvu/djview4/djview_zh_tw.qm
+%lang(zh_CN) %{_datadir}/djvu/djview4/djview_zh_cn.qm
+%lang(zh_TW) %{_datadir}/djvu/djview4/djview_zh_tw.qm
 %{_desktopdir}/djvulibre-djview4.desktop
 %{_iconsdir}/hicolor/32x32/apps/djvulibre-djview4.png
 
