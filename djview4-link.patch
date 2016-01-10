@@ -1,11 +1,12 @@
---- djview4-4.0/nsdejavu/Makefile.in.orig	2007-01-04 21:30:03.000000000 +0100
-+++ djview4-4.0/nsdejavu/Makefile.in	2007-02-04 23:58:23.980228808 +0100
-@@ -48,7 +48,7 @@
- 
- CFLAGS = @CPPFLAGS@ ${OPTS} ${INCS} ${NSDEJAVU_CFLAGS} 
- 
--LIBS = @LDFLAGS@ ${NSDEJAVU_LIBS} 
-+LIBS = @LDFLAGS@ ${NSDEJAVU_LIBS} -lXt -lX11
- 
- all: nsdejavu.la nsdejavu.x nsdejavu.1
- 
+--- djview-4.10.5/configure.ac.orig	2016-01-04 22:11:06.000000000 +0100
++++ djview-4.10.5/configure.ac	2016-01-10 09:25:05.260257215 +0100
+@@ -261,6 +261,9 @@
+         *-darwin* | *-macos10*)
+             NSDEJAVU_LIBS="$GLIB_LIBS $XT_LIBS"
+             ;;
++        *)
++            NSDEJAVU_LIBS="-lX11"
++            ;;
+     esac
+     AC_SUBST(NSDEJAVU_CFLAGS)
+     AC_SUBST(NSDEJAVU_LIBS)
