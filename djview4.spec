@@ -6,15 +6,15 @@ Summary:	DjVu viewer based on Qt 4+
 Summary(hu.UTF-8):	DjVu nézegető Qt 4+ alapon
 Summary(pl.UTF-8):	Przeglądarka DjVu oparta na Qt 4+
 Name:		djview4
-Version:	4.10.5
+Version:	4.12
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Graphics
-Source0:	http://downloads.sourceforge.net/djvu/djview-%{version}.tar.gz
-# Source0-md5:	ae6c5b9b7292558d024eb21e8769bd03
+Source0:	https://downloads.sourceforge.net/djvu/djview-%{version}.tar.gz
+# Source0-md5:	a91328d0fc949a97931511dcd983236b
 Patch0:		%{name}-opt.patch
 Patch2:		%{name}-link.patch
-URL:		http://djvu.sourceforge.net/
+URL:		https://djvu.sourceforge.net/
 BuildRequires:	autoconf >= 2.67
 BuildRequires:	automake >= 1.6
 BuildRequires:	djvulibre-devel >= 3.5.19
@@ -54,7 +54,8 @@ Requires:	QtOpenGL >= 4.4
 %endif
 Requires:	djvulibre >= 3.5.19
 Requires:	hicolor-icon-theme
-Obsoletes:	djvulibre-djview
+Obsoletes:	djview < 3.3
+Obsoletes:	djvulibre-djview < 3.5.25
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -81,10 +82,10 @@ Requires:	browser-plugins(%{_target_base_arch})
 Provides:	browser-plugin-djvulibre
 Provides:	mozilla-plugin-djvulibre
 Provides:	netscape-plugin-djvulibre
-Obsoletes:	browser-plugin-djvulibre
-Obsoletes:	djview-netscape
-Obsoletes:	mozilla-plugin-djvulibre
-Obsoletes:	netscape-plugin-djvulibre
+Obsoletes:	browser-plugin-djvulibre < 3.5.25
+Obsoletes:	djview-netscape < 3.3
+Obsoletes:	mozilla-plugin-djvulibre < 3.5.25
+Obsoletes:	netscape-plugin-djvulibre < 3.5.25
 
 %description -n browser-plugin-%{name}
 DjView4 plugin for Mozilla and Mozilla-based browsers.
@@ -96,7 +97,7 @@ DjView4 plugin Mozilla és Mozilla-alapú böngészőkhöz.
 Wtyczka DjView4 do przeglądarek zgodnych z Mozillą.
 
 %prep
-%setup -q -n djview-%{version}
+%setup -q
 %patch0 -p1
 %patch2 -p1
 
