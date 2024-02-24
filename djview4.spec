@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_with	qt5	# Qt 5 instead of Qt 4
+%bcond_without	qt5	# Qt 5 instead of Qt 4
 #
 Summary:	DjVu viewer based on Qt 4+
 Summary(hu.UTF-8):	DjVu nézegető Qt 4+ alapon
